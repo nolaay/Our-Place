@@ -40,8 +40,10 @@ min-width: 80px;
     font-style: normal;
 }
 
-#img {
+#UsImg {
   margin-top: 50px;
   width: 230px;
   height: 230px;
+  border-radius: 25%;
+  transition: transform 0.3s ease;
 }
