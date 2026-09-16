@@ -1,4 +1,6 @@
-const fechaInicio = new Date("July 20, 2026 03:23:00").getTime(); 
+const fechaInicio = new Date("July 20, 2026 03:23:00").getTime();
+const UsImg = document.getElementById("UsImg");
+UsImg.style.transition = "transform 0.3s ease";
 
 function actualizarContador() {
     const ahora = new Date().getTime();
@@ -37,3 +39,19 @@ function actualizarContador() {
 actualizarContador();
 
 setInterval(actualizarContador, 10);
+
+UsImg.addEventListener("mouseenter", () => {
+  UsImg.style.transform = "scale(1.05)";
+});
+
+UsImg.addEventListener("mouseleave", () => {
+  UsImg.style.transform = "scale(1)";
+});
+
+UsImg.addEventListener("click", () => {
+  UsImg.style.transform = "scale(1.10)";
+
+  setTimeout(() => {
+    UsImg.style.transform = "scale(1.05)"; 
+  }, 290);
+});
